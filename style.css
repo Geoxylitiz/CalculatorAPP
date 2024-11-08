@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #161414;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    background-color: rgb(160, 86, 86);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 32px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: #ffffff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:nth-child(17) { /* This targets the "0" button to span two columns */
+    grid-column: span 2;
+}
+
+button:nth-child(19) { /* This targets the "=" button */
+    background-color: #f39c12;
+    color: white;
+}
+
+button:nth-child(19):hover {
+    background-color: #e67e22;
+}
+button:active{
+    background-color: #b1aeae;
+}
